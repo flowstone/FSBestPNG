@@ -10,6 +10,7 @@ from PySide6.QtWidgets import QWidget, QVBoxLayout, QGridLayout, QSystemTrayIcon
 from PySide6.QtGui import QIcon, Qt, QDragEnterEvent, QDropEvent
 
 from src.github_upload import GitHubImageUploader
+from src.image_tool import ImageToolApp
 from src.util.config_util import ConfigUtil
 from src.widget.app_mini import FloatingBall
 from loguru import logger
@@ -29,7 +30,7 @@ class MainWindow(QMainWindow):
         self.init_ui()
 
     def init_ui(self):
-        self.setGeometry(300, 200, 600, 400)
+        #self.setGeometry(300, 200, 600, 400)
         self.setWindowTitle(FsConstants.APP_WINDOW_TITLE)
         # 设置拖拽支持
         self.setAcceptDrops(True)
@@ -54,10 +55,9 @@ class MainWindow(QMainWindow):
 
         # 创建主布局
         main_layout = QVBoxLayout(central_widget)
+        image_tool = ImageToolApp()
 
-        # 添加 GitHubImageUploader 到主界面
-        github_uploader = GitHubImageUploader()  # 初始化 GitHubImageUploader
-        main_layout.addWidget(github_uploader)  # 将其添加到布局中
+        main_layout.addWidget(image_tool)  # 将其添加到布局中
 
     # 从托盘菜单点击显示主界面
     def tray_menu_show_main(self):

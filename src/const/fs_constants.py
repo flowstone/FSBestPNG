@@ -19,8 +19,7 @@ class FsConstants:
     TOOLBAR_README_TITLE = "说明"
     TOOLBAR_AUTHOR_TITLE = "作者"
 
-
-
+    WINDOW_TITLE_IMAGE_TOOL = "图片工具"
 
 
     # 共用的常量，应用图标
