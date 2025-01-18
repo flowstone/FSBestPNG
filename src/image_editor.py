@@ -11,7 +11,7 @@ class ImageEditor(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("图像编辑器")
-        self.setGeometry(100, 100, 800, 600)
+        #self.setGeometry(100, 100, 800, 600)
 
         # 图像存储
         self.image = None
@@ -185,6 +185,7 @@ class ImageEditor(QMainWindow):
 
                 # 更新 QLabel 显示
                 scaled_pixmap = pixmap.scaled(self.image_label.size(), Qt.AspectRatioMode.KeepAspectRatio)
+
                 self.image_label.setPixmap(scaled_pixmap)
 
 

@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QTabWidget, QT
 from loguru import logger
 
 from src.const.fs_constants import FsConstants
-from src.github_upload import GitHubImageUploader
+from src.image_editor import ImageEditor
 from src.util.common_util import CommonUtil
 from src.widget.tabwidget_animation import AnimatedTabWidget
 from src.widget.toolbox_animation import AnimatedToolBox
@@ -51,8 +51,8 @@ class ImageToolApp(QWidget):
         """向 QToolBox 添加子项"""
         # 每个工具箱子项中都添加一个 QTabWidget
         toolbox_data = [
-            ("重命名", [
-                (GitHubImageUploader(), "随机"),
+            ("图片", [
+                (ImageEditor(), "裁剪"),
                 # (RenameReplaceApp(), "替换"),
             ]),
             # ("移动", [
