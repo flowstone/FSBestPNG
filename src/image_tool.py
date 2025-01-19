@@ -4,6 +4,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QTabWidget, QToolBox
 from loguru import logger
 
+from src.batch_watermark import BatchWatermarkApp
 from src.const.fs_constants import FsConstants
 from src.image_editor import ImageEditor
 from src.util.common_util import CommonUtil
@@ -55,10 +56,9 @@ class ImageToolApp(QWidget):
                 (ImageEditor(), "裁剪"),
                 # (RenameReplaceApp(), "替换"),
             ]),
-            # ("移动", [
-            #     (CreateFolderApp(), "创建文件夹"),
-            #     (MoveFileApp(), "移动文件"),
-            # ]),
+            ("批量", [
+                (BatchWatermarkApp(), "加水印"),
+            ]),
             # ("高级", [
             #     (FileGeneratorApp(), "文件生成"),
             #     (FileComparatorApp(), "文件比较"),

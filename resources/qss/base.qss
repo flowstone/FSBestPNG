@@ -103,28 +103,6 @@ QSpinBox {
     min-height: 20px;
     max-height: 20px;
     padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-QSpinBox::up-button {
-    border: none;
-    background-color: #8BC34A;
-    border-radius: 5px;
-}
-
-QSpinBox::down-button {
-    border: none;
-    background-color: #F44336;
-    border-radius: 5px;
-}
-
-QSpinBox::up-button:hover {
-    background-color: #7CB342;
-}
-
-QSpinBox::down-button:hover {
-    background-color: #E53935;
 }
 /*
  通用样式[END]
@@ -170,8 +148,7 @@ QPushButton#start_button:pressed {
 }
 QPushButton#start_button:disabled {
     background-color: gray;
-    colo
-    r: white;
+    color: white;
 }
 
 
