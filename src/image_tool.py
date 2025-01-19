@@ -6,6 +6,7 @@ from loguru import logger
 
 from src.batch_watermark import BatchWatermarkApp
 from src.const.fs_constants import FsConstants
+from src.image_compressor import ImageCompressor
 from src.image_editor import ImageEditor
 from src.util.common_util import CommonUtil
 from src.widget.tabwidget_animation import AnimatedTabWidget
@@ -54,6 +55,7 @@ class ImageToolApp(QWidget):
         toolbox_data = [
             ("图片", [
                 (ImageEditor(), "裁剪"),
+                (ImageCompressor(), "压缩"),
                 # (RenameReplaceApp(), "替换"),
             ]),
             ("批量", [
