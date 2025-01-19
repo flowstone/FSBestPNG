@@ -39,7 +39,7 @@ class MenuBar:
 
         # 将菜单项添加到“帮助”菜单中
         help_menu.addAction(option_general_action)
-        help_menu.addAction(readme_action)
+        #help_menu.addAction(readme_action)
         help_menu.addAction(about_action)
 
 
