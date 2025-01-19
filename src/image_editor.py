@@ -11,7 +11,6 @@ class ImageEditor(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("图像编辑器")
-        #self.setGeometry(100, 100, 800, 600)
 
         # 图像存储
         self.image = None
@@ -33,8 +32,7 @@ class ImageEditor(QMainWindow):
         # 图像显示区域
         self.image_label = QLabel("加载图片以开始编辑")
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.image_label.setFixedSize(600, 400)  # 设置固定宽高
-        self.image_label.setStyleSheet("border: 1px solid black;")  # 添加边框
+        self.image_label.setFixedHeight(400)  # 设置固定宽高
         layout.addWidget(self.image_label)
 
         # 按钮区域

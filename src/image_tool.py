@@ -8,6 +8,8 @@ from src.batch_watermark import BatchWatermarkApp
 from src.const.fs_constants import FsConstants
 from src.image_compressor import ImageCompressor
 from src.image_editor import ImageEditor
+from src.image_resize import ImageResizeApp
+from src.image_rotate import ImageRotateApp
 from src.util.common_util import CommonUtil
 from src.widget.tabwidget_animation import AnimatedTabWidget
 from src.widget.toolbox_animation import AnimatedToolBox
@@ -54,8 +56,10 @@ class ImageToolApp(QWidget):
         # 每个工具箱子项中都添加一个 QTabWidget
         toolbox_data = [
             ("图片", [
-                (ImageEditor(), "裁剪"),
                 (ImageCompressor(), "压缩"),
+                (ImageRotateApp(), "旋转"),
+                (ImageResizeApp(), "尺寸"),
+                (ImageEditor(), "裁剪[废弃]"),
                 # (RenameReplaceApp(), "替换"),
             ]),
             ("批量", [

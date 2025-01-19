@@ -14,7 +14,6 @@ class ImageCompressor(QWidget):
         # 显示图片的 QLabel
         self.image_label = QLabel("请选择一张图片")
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.image_label.setStyleSheet("border: 1px solid gray; min-height: 200px;")
 
         # 上传和压缩按钮
         self.upload_button = QPushButton("上传图片")
@@ -35,8 +34,8 @@ class ImageCompressor(QWidget):
 
         layout = QVBoxLayout()
         layout.addWidget(self.image_label)
-        layout.addLayout(button_layout)
         layout.addWidget(self.quality_slider)
+        layout.addLayout(button_layout)
         self.setLayout(layout)
 
         # 当前图片的文件路径
