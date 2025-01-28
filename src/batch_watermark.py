@@ -1,4 +1,6 @@
 from PySide6.QtGui import QIcon
+from fs_base.message_util import MessageUtil
+from fs_base.widget import CustomProgressBar
 from loguru import logger
 import os
 from PIL import Image, ImageEnhance
@@ -9,8 +11,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, QThread, Signal
 
 from src.util.common_util import CommonUtil
-from src.util.message_util import MessageUtil
-from src.widget.custom_progress_widget import CustomProgressBar
+
 
 
 def process_single_image(image_path, watermark, position, transparency, scale, output_folder):
